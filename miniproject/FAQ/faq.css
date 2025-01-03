@@ -1,0 +1,212 @@
+/* Global Styles */
+* {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* HEADER SECTION */
+header {
+    height: 70px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+  }
+  
+  .logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 1.5px; /* Slightly spaced letters for elegance */
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color 0.3s, background 0.3s;
+  }
+  
+  nav a:hover {
+    background: #f1e42b;
+    color: #333;
+  }
+  
+  .nav-login {
+    padding: 7px 20px;
+    background: linear-gradient(to right, #f1e42b, #ffff00);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+  }
+  
+  .nav-login:hover {
+    background: linear-gradient(to right, #e0d300, #e6e600);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+  }
+  
+/* FAQ SECTION */
+.faq-section {
+    padding: 60px 20px;
+    background-color: #f8f9fb;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f6f8fa 0%, #e9ecef 100%);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Title adjustment */
+.title {
+    font-family: 'Pacifico', cursive; /* Cool cursive font */
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: -20px; /* Move the title 20 pixels up */
+}
+
+/* Adopt Me Image Styles */
+.adopt-image-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Cool Font for FAQ Section */
+.faq-item {
+    background-color: #fff;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    border-left: 4px solid #5d5d5e;
+}
+
+.faq-item.active {
+    border-left: 4px solid #28a745;
+}
+
+.faq-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    color: #050505;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: #f1f3f5;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item h3:hover {
+    background-color: #e9ecef;
+}
+
+.faq-item h3 i {
+    font-size: 1.1rem;
+    color: #1a1a1b;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active h3 i {
+    transform: rotate(180deg);
+    color: #28a745;
+}
+
+.faq-answer {
+    max-height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    font-size: 1rem;
+    color: #666;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;  /* Adjust based on content */ 
+    padding: 15px 20px;
+}
+
+/* FOOTER SECTION */
+footer {
+    background: #333; /* Dark background for the footer */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Vertical padding for spacing */
+    text-align: center; /* Center-align text */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo h2 {
+    margin: 0;
+    font-family: 'Pacifico', cursive; /* Use the same font as the logo */
+    font-size: 24px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer-links a:hover {
+    color: #f1e42b; /* Change color on hover */
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff; /* White color for social icons */
+    font-size: 20px;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-icon:hover {
+    color: #f1e42b; /* Change color on hover */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Space above the bottom text */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
