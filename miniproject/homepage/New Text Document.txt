@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tails - Home Page</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@100;400;700&family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5aca3b7b17.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- Header section -->
+<header>
+    <div class="logo">
+        Tails
+    </div>  
+    <nav>
+        <ul>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="FAQ/index.php">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="login">
+        <a href="modern_login_page/index.php" class="nav-login">LOG IN</a>
+    </div>
+</header>
+
+<!-- Main Hero Section -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Find Your Perfect Companion</h1>
+    <p>Join our community and bring home a loving pet today.</p>
+    <a href="modern_login_page/index.php" class="hero-btn">Explore Now</a>
+  </div>
+</div>
+
+<!-- Hero Bottom -->
+<div class="hero-bottom">
+  <h3 class="hero-bottom-heading">Our Success Stories</h3>
+  <div class="story-cards-container">
+    <!-- Card 1 -->
+    <a href="story1.html" class="story-card">
+      <img src="story1.jpeg" alt="Story 1 Image">
+      <div class="card-content">
+        <h3>Aryan & Buddy</h3>
+        <p>A playful Shih Tzu named Buddy found his forever home with Aryan, bringing joy and laughter into his life.</p>
+      </div>
+    </a>
+    <!-- Card 2 -->
+    <a href="story2.html" class="story-card">
+      <img src="story2.jpg" alt="Story 2 Image">
+      <div class="card-content">
+        <h3>Priya & Mittens</h3>
+        <p>Priya, a cat lover, discovered Mittens on Tails, and now they share an unbreakable bond.</p>
+      </div>
+    </a>
+    <!-- Card 3 -->
+    <a href="story3.html" class="story-card">
+      <img src="story3.jpg" alt="Story 3 Image">
+      <div class="card-content">
+        <h3>Rakesh & Bruno</h3>
+        <p>Rakesh met Bruno, a lovable Golden Retriever, through Tails. Now, they’re inseparable.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <h2>Tails</h2>
+        </div>
+        <div class="footer-links">
+            <a href="home.php">Home</a>
+            <a href="#">About Us</a>
+            <a href="modern_login_page/index.php">Adopt</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-socials">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Tails. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
