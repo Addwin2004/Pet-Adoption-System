@@ -1,0 +1,689 @@
+/* General Styles */
+* {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+}
+
+/* HEADER SECTION */
+header {
+  height: 70px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  transition: color 0.3s, background 0.3s;
+}
+
+nav a:hover {
+  background: #f1e42b;
+  color: #333;
+}
+
+.nav-login {
+  padding: 7px 20px;
+  background: linear-gradient(to right, #f1e42b, #ffff00);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.nav-login:hover {
+  background: linear-gradient(to right, #e0d300, #e6e600);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+/* Donation Container */
+.donation-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.donation-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.donation-banner {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.donation-header h1 {
+    font-size: 2.5rem;
+    color: #3498db;
+}
+
+.donation-content {
+    margin-bottom: 2rem;
+}
+
+.donation-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2980b9;
+}
+
+.donation-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Impact Stats */
+.impact-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-item i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Donation Benefits */
+.donation-benefits {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.donation-benefits li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.donation-benefits i {
+    color: #27ae60;
+    margin-right: 0.5rem;
+}
+
+/* Donation Form */
+.donation-form {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.donation-form h2 {
+    color: #2980b9;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-donate {
+    background-color: #27ae60;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-donate:hover {
+    background-color: #2ecc71;
+}
+
+/* Testimonials */
+.testimonials {
+    margin-top: 2rem;
+}
+
+.testimonials h2 {
+    text-align: center;
+    color: #2980b9;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.testimonial {
+    background-color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+/* Messages */
+.message {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* FOOTER SECTION */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo h2 {
+    margin: 0;
+    font-family: "Pacifico", cursive;
+    font-size: 24px;
+    color: #fff;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    color: #f1e42b;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 20px;
+}
+
+.social-icon:hover {
+    color: #f1e42b;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-container {
+        padding: 1rem;
+    }
+
+    .impact-stats {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        margin-bottom: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links, .footer-socials {
+        margin-top: 1rem;
+    }
+}
+
+/* Animal Animation Styles */
+.animal-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+
+.dog-container, .cat-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+/* Dog Styles */
+.dog-body {
+    width: 140px;
+    height: 90px;
+    background-color: #8B4513;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    top: 130px;
+    left: 80px;
+}
+.dog-chest {
+    width: 110px;
+    height: 50px;
+    background-color: #D2691E;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    top: 170px;
+    left: 95px;
+}
+.dog-head {
+    width: 110px;
+    height: 90px;
+    background-color: #8B4513;
+    border-radius: 50% 50% 65% 65%;
+    position: absolute;
+    top: 70px;
+    left: 95px;
+}
+.dog-ear {
+    width: 40px;
+    height: 60px;
+    background-color: #8B4513;
+    border-radius: 50% 50% 0 50%;
+    position: absolute;
+}
+.dog-ear-left {
+    top: 30px;
+    left: 80px;
+    transform: rotate(-30deg);
+    animation: ear-wiggle-left 3s infinite;
+}
+.dog-ear-right {
+    top: 30px;
+    right: 80px;
+    transform: rotate(30deg) scaleX(-1);
+    animation: ear-wiggle-right 3s infinite;
+}
+.dog-eye {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+}
+.dog-eye-left {
+    left: 115px;
+}
+.dog-eye-right {
+    right: 115px;
+}
+.dog-nose {
+    width: 25px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 120px;
+    left: 137px;
+}
+.dog-mouth {
+    width: 50px;
+    height: 25px;
+    border: 4px solid #000;
+    border-radius: 0 0 100px 100px;
+    border-top: none;
+    position: absolute;
+    top: 135px;
+    left: 125px;
+}
+.dog-tongue {
+    width: 25px;
+    height: 15px;
+    background-color: #FF69B4;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: pant 0.5s infinite alternate;
+}
+.dog-tail {
+    width: 15px;
+    height: 60px;
+    background-color: #8B4513;
+    
+    border-radius: 10px;
+    position: absolute;
+    top: 130px;
+    right: 70px;
+    transform-origin: top center;
+    animation:   tail-wag 0.2s infinite alternate;
+}
+.dog-leg {
+    width: 20px;
+    height: 50px;
+    background-color: #8B4513;
+    border-radius: 10px;
+    position: absolute;
+}
+.dog-leg-front-left {
+    top: 190px;
+    left: 90px;
+}
+.dog-leg-front-right {
+    top: 190px;
+    left: 130px;
+}
+.dog-leg-back-left {
+    top: 190px;
+    right: 130px;
+}
+.dog-leg-back-right {
+    top: 190px;
+    right: 90px;
+}
+
+/* Cat Styles */
+.cat-body {
+    width: 140px;
+    height: 80px;
+    background-color: #808080;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    top: 140px;
+    left: 80px;
+}
+.cat-head {
+    width: 100px;
+    height: 90px;
+    background-color: #808080;
+    border-radius: 50%;
+    position: absolute;
+    top: 80px;
+    left: 100px;
+}
+.cat-ear {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #808080;
+    position: absolute;
+}
+.cat-ear-left {
+    top: 50px;
+    left: 90px;
+    transform: rotate(-30deg);
+}
+.cat-ear-right {
+    top: 50px;
+    right: 90px;
+    transform: rotate(30deg);
+}
+.cat-eye {
+    width: 25px;
+    height: 25px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+}
+.cat-eye-left {
+    left: 110px;
+}
+.cat-eye-right {
+    right: 110px;
+}
+.cat-nose {
+    width: 15px;
+    height: 10px;
+    background-color: #FFC0CB;
+    border-radius: 50%;
+    position: absolute;
+    top: 130px;
+    left: 142px;
+}
+.cat-mouth {
+    width: 30px;
+    height: 10px;
+    border: 2px solid #000;
+    border-radius: 0 0 100px 100px;
+    border-top: none;
+    position: absolute;
+    top: 140px;
+    left: 135px;
+}
+.cat-tail {
+    width: 10px;
+    height: 80px;
+    background-color: #808080;
+    border-radius: 10px;
+    position: absolute;
+    top: 140px;
+    right: 60px;
+    transform-origin: top center;
+    animation: tail-wag 2s infinite alternate;
+}
+.cat-leg {
+    width: 15px;
+    height: 40px;
+    background-color: #808080;
+    border-radius: 10px;
+    position: absolute;
+}
+.cat-leg-front-left {
+    top: 200px;
+    left: 95px;
+}
+.cat-leg-front-right {
+    top: 200px;
+    left: 125px;
+}
+.cat-leg-back-left {
+    top: 200px;
+    right: 125px;
+}
+.cat-leg-back-right {
+    top: 200px;
+    right: 95px;
+}
+
+@keyframes tail-wag {
+    0% { transform: rotate(-15deg); }
+    100% { transform: rotate(15deg); }
+}
+
+@keyframes ear-wiggle-left {
+    0%, 100% { transform: rotate(-30deg); }
+    50% { transform: rotate(-40deg); }
+}
+
+@keyframes ear-wiggle-right {
+    0%, 100% { transform: rotate(30deg) scaleX(-1); }
+    50% { transform: rotate(40deg) scaleX(-1); }
+}
+
+@keyframes tongue-move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(5px); }
+}
+
+.blink {
+    animation: blink-animation 0.5s;
+}
+
+@keyframes blink-animation {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(0.1); }
+    100% { transform: scaleY(1); }
+}
+
+/* New styles for loading animation and popup */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 300px;
+    height: 300px;
+}
+
+.popup-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.popup-icon {
+    font-size: 80px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.popup h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.popup p {
+    font-size: 18px;
+}
