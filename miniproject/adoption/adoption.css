@@ -1,0 +1,779 @@
+/* General Styles */
+* {
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* HEADER SECTION */
+header {
+  height: 70px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  transition: color 0.3s, background 0.3s;
+}
+
+nav a:hover {
+  background: #f1e42b;
+  color: #333;
+}
+
+.nav-login {
+  padding: 7px 20px;
+  background: linear-gradient(to right, #f1e42b, #ffff00);
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.nav-login:hover {
+  background: linear-gradient(to right, #e0d300, #e6e600);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+/* Adoption Section Styles */
+.adoption-section {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  position: relative;
+}
+
+h1, .section-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  margin-top: 2.4rem;
+  font-size: 2.3rem;
+  font-family: Pacifico, cursive;
+}
+
+h1:hover {
+  color: #666;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#species-filter, #gender-filter {
+  color: #666;
+  font-family: "Poppins", sans-serif;
+}
+
+.filter-container input,
+.filter-container select,
+.filter-container button {
+  margin: 0 0.5rem;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.filter-container button {
+  background-color: #f1e42b;
+  color: #333;
+  cursor: pointer;
+}
+
+.filter-container button:hover {
+  color: #ddd;
+  background-color: #333;
+}
+
+/* Updated Pet Cards Styles */
+.pets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.pets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.pet-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 350px; /* Reduced height */
+  width: 300px;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pet-card img {
+  width: 100%;
+  height: 230px; /* Reduced height */
+  object-fit: cover;
+}
+
+.pet-info {
+  padding: 1rem;
+  line-height: 5px;
+}
+
+.pet-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.pet-card p {
+  margin: 0 0 0.3rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modalPetImage {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Pet Details Styles */
+.pet-details {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease;
+  width: 60%;
+}
+
+.pet-details:hover {
+  transform: translateY(-5px);
+}
+
+.pet-details img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pet-details h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-family: 'Pacifico', cursive;
+}
+
+.pet-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.info-item i {
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+  color: #f1e42b;
+  width: 20px;
+  text-align: center;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content strong {
+  color: #333;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.info-content span {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+
+
+.pet-description {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pet-description h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.pet-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  white-space: pre-wrap;
+}
+
+.action-buttons {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.btn-fancy {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-fancy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-list-pet {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-list-pet:hover {
+  background-color: #45a049;
+}
+
+.btn-back {
+  background-color: #2196f3;
+  color: white;
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 100;
+}
+
+.btn-back:hover {
+  background-color: #1e87db;
+  transform: translateY(-2px);
+}
+
+/* Pet Listing Form Styles */
+.list-pet form {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #f6e600;
+  transition: color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.textarea-icon i {
+  top: 25px;
+  transform: none;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem 1rem 1rem 45px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-group textarea {
+  padding-left: 45px;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #261407;
+  box-shadow: 0 0 0 3px rgba(241, 228, 43, 0.2);
+  outline: none;
+}
+
+.form-group input:focus + i,
+.form-group select:focus + i,
+.form-group textarea:focus + i {
+  color: #f1e42b;
+}
+
+.word-count {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  background-color: #f1e42b;
+  color: #333;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.custom-file-upload:hover {
+  background-color: #e0d300;
+  transform: translateY(-2px);
+}
+
+#file-upload {
+  display: none;
+}
+
+/* Hover effects for form elements */
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #bbb;
+}
+
+.form-group input:hover + i,
+.form-group select:hover + i,
+.form-group textarea:hover + i {
+  color: #666;
+}
+
+/* Age input container */
+.age-input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.age-input-container input {
+  width: calc(50% - 5px);
+}
+
+/* Adoption Form Styles */
+.adoption-form {
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 2rem;
+}
+
+.adoption-form h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.adoption-form input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.adoption-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.adoption-form button:hover {
+  background-color: #45a049;
+}
+
+/* FOOTER SECTION */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo h2 {
+  margin: 0;
+  font-family: "Pacifico", cursive;
+  font-size: 24px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: #f1e42b;
+}
+
+.footer-socials {
+  display: flex;
+  
+  gap: 15px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 20px;
+}
+
+.social-icon:hover {
+  color: #f1e42b;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Message Styles */
+.success-message,
+.error-message {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.login-message {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.login-message a {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-message a:hover {
+  text-decoration: underline;
+}
+
+/* New styles for my_adoptions.php */
+.table-container {
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f1e42b;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-view:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.empty-message {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-message {
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+  margin-bottom: 15px;
+  padding: 10px;
+  color: #0c5460;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .adoption-section {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .btn-back {
+    top: 80px;
+    left: 10px;
+  }
+
+  .filter-container {
+    flex-direction: column;
+  }
+
+  .filter-container input,
+  .filter-container select,
+  .filter-container button {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .pets-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-socials {
+    margin-top: 1rem;
+  }
+
+  .btn-fancy {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .list-pet form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .age-input-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .age-input-container input {
+    width: 100%;
+  }
+
+  .pet-details {
+    padding: 1rem;
+  }
+
+  .pet-info {
+    grid-template-columns: 1fr;
+  }
+
+  .adoption-form button {
+    width: 100%;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+}
