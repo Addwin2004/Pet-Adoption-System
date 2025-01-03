@@ -1,0 +1,831 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #f4f4f4;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: #333;
+  color: #fff;
+  padding-top: 20px;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Pacifico", cursive;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  transition: color 0.3s, background 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #555;
+  color: #fff;
+}
+
+.sidebar ul li a i {
+  margin-right: 10px;
+}
+
+/* Main Content Styles */
+.content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.content h1 {
+  margin-bottom: 20px;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+/* Dashboard Cards */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Individual Card Colors */
+.total-customers {
+  background-color: #ff6f61;
+}
+.total-pets {
+  background-color: #6fbf7f;
+}
+.total-adoptions {
+  background-color: #f9d86e;
+}
+.total-feedback {
+  background-color: #6e9bf9;
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 24px;
+  color: white;
+}
+
+/* Pet Management Specific Styles */
+.search-sort-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: 200px;
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.sort-controls input[type="text"],
+.sort-controls select {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.sort-controls input[type="text"]:focus,
+.sort-controls select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  outline: none;
+  background-color: #ffffff;
+}
+
+.sort-controls select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 12px auto;
+  padding-right: 40px;
+}
+
+.sort-controls button {
+  padding: 12px 25px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.sort-controls button:hover {
+  background-color: #3a7bc8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.2);
+}
+
+.sort-controls button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+}
+
+/* Table Section Styles */
+.table-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: 100px;
+}
+
+.table-section h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e1b382;
+}
+
+/* Button Styles */
+.btn-view,
+.btn-delete,
+.btn-edit {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-view,
+.btn-edit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-view:hover,
+.btn-delete:hover,
+.btn-edit:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  margin: 5% auto;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close {
+  color: #7f8c8d;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #34495e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#editPetForm {
+  display: grid;
+  gap: 15px;
+}
+
+#editPetForm label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+#editPetForm input[type="text"],
+#editPetForm input[type="number"],
+#editPetForm select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#editPetForm button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#editPetForm button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Message Styles */
+.message {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: none;
+  animation: fadeInOut 4s ease-in-out;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+  .content {
+    margin-left: 200px;
+  }
+  .cards {
+    flex-wrap: wrap;
+  }
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .content {
+    margin-left: 0;
+    padding: 10px;
+  }
+  .card {
+    flex-basis: 100%;
+  }
+  .sort-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .sort-controls input[type="text"],
+  .sort-controls select,
+  .sort-controls button {
+    width: 100%;
+  }
+  table {
+    font-size: 14px;
+  }
+  th,
+  td {
+    padding: 8px;
+  }
+  .btn-view,
+  .btn-delete,
+  .btn-edit {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+/* Accessibility Improvements */
+.btn-view:focus,
+.btn-delete:focus,
+.btn-edit:focus,
+.sort-controls input:focus,
+.sort-controls select:focus,
+.sort-controls button:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .sidebar,
+  .search-sort-container,
+  .btn-view,
+  .btn-delete,
+  .btn-edit {
+    display: none;
+  }
+  .content {
+    margin-left: 0;
+  }
+  body,
+  table {
+    font-size: 12pt;
+  }
+  .table-section {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
+
+/* Feedback Management Styles */
+.feedback-list {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feedback-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 800px;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.customer-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.feedback-rating {
+  color: #ffd700;
+}
+
+.feedback-text {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.feedback-date {
+  color: #888;
+  font-size: 12px;
+}
+
+.feedback-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Filter Styles */
+.filter-container {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.filter-container:hover {
+  background-color: #f1eded;
+}
+
+.filter-container form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-container label {
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-container select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.filter-container button {
+  padding: 8px 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-container button:hover {
+  background-color: #3a7bc8;
+}
+
+/* Updated Modal Styles for Feedback */
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  margin: 5% auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease-in-out;
+  position: relative;
+  padding-top: 50px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-content h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  z-index: 1;
+}
+
+.modal-body {
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.modal-body p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.modal-body #modalFeedbackText {
+  max-height: none;
+  overflow-y: visible;
+  padding-right: 10px;
+}
+
+.modal-body strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.modal-body span {
+  color: #34495e;
+}
+
+.modal-body i {
+  color: #3498db;
+  margin-right: 8px;
+}
+
+.close {
+  color: #7f8c8d;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+  color: #34495e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button Styles */
+.btn-approve,
+.btn-reject,
+.btn-delete {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-approve {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-reject {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-approve:hover,
+.btn-reject:hover,
+.btn-delete:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-approve:active,
+.btn-reject:active,
+.btn-delete:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Icon Styles */
+.btn-approve i,
+.btn-reject i,
+.btn-delete i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+/* Status Badge Styles */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-approved {
+    background-color: #E8F5E9;
+    color: #4CAF50;
+}
+
+.status-rejected {
+    background-color: #FFEBEE;
+    color: #f44336;
+}
+
+.status-pending {
+    background-color: #FFF8E1;
+    color: #FFA000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .btn-approve,
+    .btn-reject,
+    .btn-delete {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .btn-approve i,
+    .btn-reject i,
+    .btn-delete i {
+        font-size: 14px;
+    }
+
+    .status-badge {
+        padding: 3px 6px;
+        font-size: 10px;
+    }
+}
+/* Add Montserrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
