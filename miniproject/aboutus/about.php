@@ -114,7 +114,7 @@ if ($isLoggedIn) {
             <div class="about-section reverse">
                 <div class="about-text">
                     <h2>How We Started</h2>
-                    <p>Tails was founded by Addwin Antony Stephen and Alan Paulose, with the vision to revolutionize pet adoption. Inspired by their own experiences and the challenges they observed in the adoption process, they set out to create a platform that would bridge the gap between shelters, pets, and potential adopters.</p>
+                    <p>Tails was founded by Addwin Antony Stephen , with the vision to revolutionize pet adoption. Inspired by their own experiences and the challenges they observed in the adoption process, they set out to create a platform that would bridge the gap between shelters, pets, and potential adopters.</p>
                 </div>
                 <div class="about-image">
                     <img src="howwestarted.jpg" alt="How We Started - Founders working on Tails platform">
